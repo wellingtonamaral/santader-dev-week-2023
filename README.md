@@ -1,24 +1,42 @@
-# Getting Started
+# Santander Dev Week 2023
+Java RESTful API criada para a Santander Dev Wek
 
-### Reference Documentation
-For further reference, please consider the following sections:
+##  Diagrama de Classes
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.1.5/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.5/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
+```mermaid
+classDiagram
+    class User {
+        -name: String
+        -account: Account
+        -features: List<Feature>
+        -card: Card
+        -news: List<News>
+    }
 
-### Guides
-The following guides illustrate how to use some features concretely:
+    class Account {
+        -accountNumber: String
+        -accountAgency: String
+        -accountBalance: Double
+        -accountLimit: Double
+    }
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+    class Feature {
+        -icon: String
+        -description: String
+    }
 
-### Additional Links
-These additional references should also help you:
+    class Card {
+        -cardNumber: String
+        -cardLimit: Double
+    }
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+    class News {
+        -icon: String
+        -description: String
+    }
 
+    User --> Account
+    User --> Feature
+    User --> Card
+    User --> News
+```
