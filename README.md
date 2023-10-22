@@ -1,7 +1,7 @@
 <h1 align="center">:file_cabinet: API RESTful em Spring Bot (Santander Week 2023)</h1>
 
 # Santander Dev Week 2023
-Java RESTful API criada para a Santander Dev Wek
+Java RESTful API criada para a Santander Dev Week
 
 ## :wrench: Tecnologias utilizadas
 - **Java 17**: Utilizaremos a versão LTS mais recente do Java para tirar vantagem das últimas inovações que essa linguagem robusta e amplamente utilizada oferece;
